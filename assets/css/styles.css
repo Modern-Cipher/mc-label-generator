@@ -1,86 +1,21 @@
+/* assets/css/styles.css */
+
+/* General Body and Container Styles */
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f8f9fa; /* Light background for the form page */
 }
 
 .container {
   max-width: 600px;
+  background-color: #ffffff; /* White background for the form container */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-.label-container {
-  display: grid;
-  gap: 0;
-  justify-content: center; 
-}
-
-.label-card {
-  font-family: 'Poppins', sans-serif;
-  border: 0.75pt dashed lightgray; 
-  text-align: center;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 2in;
-  height: 2in;
-  min-width: 2in;
-  min-height: 2in;
-  max-width: 2in;
-  max-height: 2in;
-  box-sizing: border-box;
-  padding: 6px;
-}
-
-.label-card img.logo {
-  max-width: 60%;
-  height: auto;
-  margin-bottom: 4px;
-}
-
-/* --- STYLE FOR IMAGE FALLBACK --- */
-.logo-fallback {
-  border: 1px solid #ccc;
-  border-radius: 8px; /* Pabilog na kanto */
-  width: 60%;
-  height: 50px; /* Adjust height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: bold;
-  color: #888;
-  margin-bottom: 4px;
-  box-sizing: border-box;
-}
-
-.label-card p {
-  margin: 2px 0;
-  font-size: 10px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.dates {
-  width: 60%;
-  margin-top: 4px;
-}
-
-.dates p {
-  font-size: 9px;
-  font-weight: normal;
-  text-align: left;
-  border-bottom: 0.5pt solid #555;
-  padding-bottom: 2px;
-  margin-bottom: 5px;
-}
-
-.pdf-page-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
+/* Footer Styles */
 footer {
   margin-top: 3rem;
   padding: 1.5rem 0;
@@ -99,25 +34,47 @@ footer p {
   margin-bottom: 0;
 }
 
-/* --- STYLE FOR VERSION DISPLAY --- */
+/* Version Display Styles */
 #version-display {
-  margin-top: -0.75rem; 
+  margin-top: -0.75rem;
   margin-bottom: 2rem;
   font-size: 0.85rem;
   color: #6c757d;
 }
 
-/* --- STYLE FOR BUTTON ICON --- */
-.btn i {
-  margin-right: 8px; 
-}
-
-/* --- FOR 10px BUTTON GAP --- */
+/* --- BUTTON GROUP STYLES --- */
 .button-group {
-    gap: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: row; /* Default layout for desktop */
+  flex-wrap: wrap; 
+  justify-content: center;
 }
 
-/* --- NEW: FOR EQUAL WIDTH BUTTONS --- */
 .button-group .btn {
-    flex-grow: 1;
+  flex-grow: 1; 
+  max-width: 180px; 
+}
+
+.btn i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+/* For screens smaller than 768px (e.g., mobile phones) */
+@media (max-width: 767.98px) {
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons in the column */
+  }
+
+  .button-group .btn {
+    width: 100%; /* Make buttons take full width */
+    max-width: 100%; /* Override the desktop max-width */
+    margin-bottom: 10px; /* Add space between stacked buttons */
+  }
+
+  .button-group .btn:last-child {
+    margin-bottom: 0; /* Remove margin from the last button */
+  }
 }

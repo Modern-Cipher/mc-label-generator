@@ -1,0 +1,121 @@
+/* assets/css/chicha-crush.css */
+
+/* Universal reset for label-card content */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles for the label card */
+.label-card {
+  font-family: 'Poppins', sans-serif;
+  border: 0.75pt dashed lightgray; /* Border for separation */
+  text-align: center;
+  overflow: hidden; /* Clip overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push everything to the top */
+  align-items: stretch; /* Stretch content to full width */
+  width: 2in;
+  height: 2in;
+  min-width: 2in;
+  min-height: 2in;
+  max-width: 2in;
+  max-height: 2in;
+  box-sizing: border-box;
+  padding: 0.04in; /* Padding for readability around edges */
+  margin: 0;
+  page-break-inside: avoid; /* Prevent labels from splitting across pages */
+  background-color: #ffffff; /* Ensure white background for print/image */
+}
+
+/* Wrapper for logo to control its spacing and centering */
+.logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Don't shrink */
+  margin-bottom: 0; /* No space below logo wrapper initially */
+}
+
+/* LOGO IMAGE STYLES - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
+.label-card img.logo {
+  width: 85%; /* **INCREASED LOGO WIDTH TO STRETCH MORE HORIZONTALLY** */
+  max-width: 85%;
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 0.03in auto; /* Center and add a small bottom margin */
+  padding: 0;
+  display: block;
+}
+
+/* Fallback for when logo image fails to load - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
+.logo-fallback {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  width: 85%; /* Match logo width */
+  max-width: 85%;
+  height: 0.28in; /* Adjusted height for fallback, proportionate to new larger logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.11in; /* Slightly larger fallback font */
+  font-weight: bold;
+  color: #888;
+  margin: 0 auto 0.03in auto; /* Match logo margin */
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+/* Main Product Text (e.g., "Whole 1000g") - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
+.label-card .main-content {
+  margin-top: 0; /* Rely on logo's margin-bottom for separation */
+  margin-bottom: 0; /* No vertical margin below */
+  padding: 0 0.02in; /* Minimal horizontal padding */
+  font-size: 0.18in; /* Keeping this size as it fit well previously */
+  font-weight: 700;
+  white-space: nowrap; /* Keep on one line */
+  overflow: hidden; /* Clip overflow */
+  text-overflow: ellipsis; /* Ellipsis for overflow */
+  line-height: 1; /* Tighter line height for minimal spacing */
+  width: 100%; /* Full width within padding */
+  box-sizing: border-box;
+  display: block; /* Ensures it takes its own space */
+  flex-grow: 0; /* Do not grow */
+  flex-shrink: 0; /* Do not shrink */
+}
+
+/* Dates container (PD and BB) - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
+.dates {
+  width: 100%; /* Full width */
+  margin-top: 0; /* CRITICAL: NO MARGIN AT ALL between main content and dates */
+  padding: 0 0.02in; /* Minimal horizontal padding */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push dates to top of their container */
+  flex-grow: 1; /* Allow dates section to fill remaining vertical space (if any) */
+  flex-shrink: 0; /* Don't shrink */
+}
+
+/* Individual date lines within dates container - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
+.dates p {
+  font-size: 0.16in; /* Kept this size for dates */
+  font-weight: normal;
+  text-align: left; /* Dates are left-aligned */
+  border-bottom: 0.5pt solid #555; /* Default border for PD */
+  padding: 0; /* CRITICAL: NO PADDING */
+  margin: 0; /* CRITICAL: NO MARGINS BETWEEN DATE LINES */
+  line-height: 1.1; /* Slightly relaxed line height for readability */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ellipsis for overflow */
+  display: block;
+}
+
+/* Special rule for the BB date line */
+.dates p:last-child {
+  border-bottom: 0.5pt solid #555; /* Ensure BB also has a bottom border/line */
+}
