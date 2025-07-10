@@ -1,0 +1,27 @@
+/* assets/css/chicha-crush-mobile.css */
+/* This file ONLY applies on mobile devices for the Chicha Crush logo */
+
+.label-card {
+    padding: 0.05in !important;
+}
+
+/* LOGO IMAGE STYLES - Bigger logo for mobile */
+.label-card img.logo {
+  width: 90% !important; /* Use !important to override original style */
+  margin-bottom: 0.05in !important;
+}
+
+/* Main Product Text - Smaller font for mobile */
+.label-card .main-content {
+  font-size: 0.16in !important;
+  margin-bottom: 0.05in !important;
+}
+
+/* Individual date lines - Smaller font for mobile */
+.dates p {
+  font-size: 0.14in !important;
+}
+
+.dates p:last-child {
+  border-bottom: none !important; /* Remove last border for cleaner look on mobile */
+}

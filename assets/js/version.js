@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- DITO KA MAG-UUPDATE NG VERSION ---
   // Palitan mo lang ang numero ng 'minorVersion' kapag gusto mo ng bagong timestamp.
   const majorVersion = 1;
-  const minorVersion = 3; // Itinakda sa 1 para mag-trigger ng update sa unang run
+  const minorVersion = 4; // Itinakda sa 1 para mag-trigger ng update sa unang run
 
   // Ang iyong bago at live na Google Apps Script Web App URL
   const GAS_URL =

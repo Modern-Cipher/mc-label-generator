@@ -37,15 +37,15 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0; /* Don't shrink */
-  margin-bottom: 0.01in; /* Slightly reduced margin below logo */
+  margin-bottom: 0; 
 }
 
 /* LOGO IMAGE STYLES - **SPECIFICALLY FOR RONSHE-DRAGONS.PNG** */
 .label-card img.logo {
-  width: 70%; /* **SIGNIFICANTLY REDUCED LOGO SIZE to create more vertical space** */
-  max-width: 70%;
+  width: 73%; /* BINAGO: Binawasan pa nang kaunti para magkasya lahat */
+  max-width: 73%; /* BINAGO: Binawasan pa nang kaunti para magkasya lahat */
   height: auto; /* Maintain aspect ratio */
-  margin: 0; /* No margin on the image itself */
+  margin: 0 auto 0.03in auto; 
   padding: 0;
   display: block;
 }
@@ -54,16 +54,16 @@
 .logo-fallback {
   border: 1px solid #ccc;
   border-radius: 0;
-  width: 70%; /* Match logo width */
-  max-width: 70%;
-  height: 0.25in; /* Adjusted height for fallback to match smaller logo */
+  width: 73%; /* BINAGO: Itinugma sa bagong laki ng logo */
+  max-width: 73%; /* BINAGO: Itinugma sa bagong laki ng logo */
+  height: 0.25in; 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.1in; /* Smaller fallback font */
+  font-size: 0.1in;
   font-weight: bold;
   color: #888;
-  margin: 0;
+  margin: 0 auto 0.03in auto;
   padding: 0;
   box-sizing: border-box;
   line-height: 1;
@@ -71,51 +71,50 @@
 
 /* Main Product Text (e.g., "Whole 1000g") - **SPECIFICALLY FOR RONSHE-DRAGONS.PNG** */
 .label-card .main-content {
-  margin-top: 0; /* Keep top margin zero, rely on logo-wrapper margin */
-  margin-bottom: 0; /* No vertical margin below */
-  padding: 0 0.02in; /* Minimal horizontal padding */
-  font-size: 0.15in; /* Keeping this font size, it seems okay horizontally */
+  margin: 0 0 3pt 0;
+  padding: 0 0.02in;
+  font-size: 9pt;
   font-weight: 700;
-  white-space: nowrap; /* Keep on one line */
-  overflow: hidden; /* Clip overflow */
-  text-overflow: ellipsis; /* Ellipsis for overflow */
-  line-height: 1; /* Tighter line height for minimal spacing */
-  width: 100%; /* Full width within padding */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  width: 100%;
   box-sizing: border-box;
-  display: block; /* Ensures it takes its own space */
-  flex-grow: 0; /* Do not grow */
-  flex-shrink: 0; /* Do not shrink */
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 /* Dates container (PD and BB) - **SPECIFICALLY FOR RONSHE-DRAGONS.PNG** */
 .dates {
-  width: 100%; /* Full width */
-  margin-top: 0; /* CRITICAL: NO MARGIN AT ALL between main content and dates */
-  padding: 0 0.02in; /* Minimal horizontal padding */
+  width: 100%;
+  margin-top: 0;
+  padding: 0 0.02in;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Push dates to top of their container */
-  flex-grow: 1; /* Allow dates section to fill remaining vertical space (if any) */
-  flex-shrink: 0; /* Don't shrink */
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 /* Individual date lines within dates container - **SPECIFICALLY FOR RONSHE-DRAGONS.PNG** */
 .dates p {
-  font-size: 0.16in; /* Keeping this font size, as it was already reduced */
+  font-size: 9pt;
   font-weight: normal;
-  text-align: left; /* Dates are left-aligned */
-  border-bottom: 0.5pt solid #555; /* Default border for PD */
-  padding: 0; /* CRITICAL: NO PADDING */
-  margin: 0; /* CRITICAL: NO MARGINS BETWEEN DATE LINES */
-  line-height: 1; /* TIGHTER LINE HEIGHT for dates */
+  text-align: center;
+  border-bottom: 0.5pt solid #555;
+  padding: 0;
+  margin: 0;
+  line-height: 1.1;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Ellipsis for overflow */
+  text-overflow: ellipsis;
   display: block;
 }
 
 /* Special rule for the BB date line */
 .dates p:last-child {
-  border-bottom: 0.5pt solid #555; /* Ensure BB also has a bottom border/line */
+  border-bottom: 0.5pt solid #555;
 }
