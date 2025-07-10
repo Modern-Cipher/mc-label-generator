@@ -42,8 +42,8 @@
 
 /* LOGO IMAGE STYLES - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
 .label-card img.logo {
-  width: 85%; /* **INCREASED LOGO WIDTH TO STRETCH MORE HORIZONTALLY** */
-  max-width: 85%;
+  width: 90%;
+  max-width: 90%;
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto 0.03in auto; /* Center and add a small bottom margin */
   padding: 0;
@@ -54,16 +54,16 @@
 .logo-fallback {
   border: 1px solid #ccc;
   border-radius: 0;
-  width: 85%; /* Match logo width */
-  max-width: 85%;
-  height: 0.28in; /* Adjusted height for fallback, proportionate to new larger logo */
+  width: 90%;
+  max-width: 90%;
+  height: 0.28in;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.11in; /* Slightly larger fallback font */
+  font-size: 0.11in;
   font-weight: bold;
   color: #888;
-  margin: 0 auto 0.03in auto; /* Match logo margin */
+  margin: 0 auto 0.03in auto;
   padding: 0;
   box-sizing: border-box;
   line-height: 1;
@@ -71,51 +71,52 @@
 
 /* Main Product Text (e.g., "Whole 1000g") - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
 .label-card .main-content {
-  margin-top: 0; /* Rely on logo's margin-bottom for separation */
-  margin-bottom: 0; /* No vertical margin below */
-  padding: 0 0.02in; /* Minimal horizontal padding */
-  font-size: 0.18in; /* Keeping this size as it fit well previously */
+  margin-top: 0;
+  /* BINAGO: Nilagyan ng maliit na espasyo sa ilalim para humiwalay sa petsa */
+  margin-bottom: 3pt;
+  padding: 0 0.02in;
+  font-size: 9pt;
   font-weight: 700;
-  white-space: nowrap; /* Keep on one line */
-  overflow: hidden; /* Clip overflow */
-  text-overflow: ellipsis; /* Ellipsis for overflow */
-  line-height: 1; /* Tighter line height for minimal spacing */
-  width: 100%; /* Full width within padding */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  width: 100%;
   box-sizing: border-box;
-  display: block; /* Ensures it takes its own space */
-  flex-grow: 0; /* Do not grow */
-  flex-shrink: 0; /* Do not shrink */
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 /* Dates container (PD and BB) - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
 .dates {
-  width: 100%; /* Full width */
-  margin-top: 0; /* CRITICAL: NO MARGIN AT ALL between main content and dates */
-  padding: 0 0.02in; /* Minimal horizontal padding */
+  width: 100%;
+  margin-top: 0;
+  padding: 0 0.02in;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Push dates to top of their container */
-  flex-grow: 1; /* Allow dates section to fill remaining vertical space (if any) */
-  flex-shrink: 0; /* Don't shrink */
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 /* Individual date lines within dates container - **SPECIFICALLY FOR CHICHA-CRUSH.PNG** */
 .dates p {
-  font-size: 0.16in; /* Kept this size for dates */
+  font-size: 9pt;
   font-weight: normal;
-  text-align: left; /* Dates are left-aligned */
-  border-bottom: 0.5pt solid #555; /* Default border for PD */
-  padding: 0; /* CRITICAL: NO PADDING */
-  margin: 0; /* CRITICAL: NO MARGINS BETWEEN DATE LINES */
-  line-height: 1.1; /* Slightly relaxed line height for readability */
+  text-align: center;
+  border-bottom: 0.5pt solid #555;
+  padding: 0;
+  margin: 0;
+  line-height: 1.1;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Ellipsis for overflow */
+  text-overflow: ellipsis;
   display: block;
 }
 
 /* Special rule for the BB date line */
 .dates p:last-child {
-  border-bottom: 0.5pt solid #555; /* Ensure BB also has a bottom border/line */
+  border-bottom: 0.5pt solid #555;
 }
