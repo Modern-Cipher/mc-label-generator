@@ -4,34 +4,133 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #f8f9fa; /* Light background for the form page */
+  background-color: #f8f9fa;
+  padding-top: 1.5rem; /* Add some space at the top */
 }
+
+/* --- TOP NAVIGATION STYLES --- */
+.top-nav-container {
+  max-width: 632px; /* Matches container width + padding */
+  margin: 0 auto 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #495057;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.back-link:hover {
+  color: #0d6efd;
+}
+
+.back-link i {
+  margin-right: 5px;
+}
+
+.info-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.info-button:hover {
+  color: #0d6efd;
+}
+/* --- END OF TOP NAVIGATION STYLES --- */
 
 .container {
   max-width: 600px;
-  background-color: #ffffff; /* White background for the form container */
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-/* Footer Styles */
+/* --- REVISED FOOTER STYLES --- */
 footer {
   margin-top: 3rem;
   padding: 1.5rem 0;
-  border-top: 1px solid #dee2e6;
   text-align: center;
   color: #6c757d;
+  background-color: transparent;
 }
 
 footer img {
   height: 35px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem; /* Space between logo and social icons */
+  animation: float-animation 3s ease-in-out infinite;
 }
 
 footer p {
   font-size: 0.85rem;
+  margin-top: 1.5rem; /* Space between social icons and text */
   margin-bottom: 0;
+}
+
+@keyframes float-animation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* --- FOOTER SOCIAL ICONS --- */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #6c757d;
+  background-color: transparent;
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+  transform: translateY(-5px);
+}
+
+/* --- CUSTOM TOOLTIP STYLE --- */
+.tooltip .tooltip-inner {
+  background-color: #343a40;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 0.3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip .tooltip-arrow::before {
+  border-top-color: #343a40;
 }
 
 /* Version Display Styles */
@@ -46,35 +145,87 @@ footer p {
 .button-group {
   gap: 10px;
   display: flex;
-  flex-direction: row; /* Default layout for desktop */
-  flex-wrap: wrap; 
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .button-group .btn {
-  flex-grow: 1; 
-  max-width: 180px; 
+  flex-grow: 1;
+  max-width: 180px;
 }
 
 .btn i {
-  margin-right: 8px; /* Space between icon and text */
+  margin-right: 8px;
 }
 
 /* --- MOBILE RESPONSIVE STYLES --- */
-/* For screens smaller than 768px (e.g., mobile phones) */
 @media (max-width: 767.98px) {
   .button-group {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center buttons in the column */
+    flex-direction: column;
+    align-items: center;
   }
 
   .button-group .btn {
-    width: 100%; /* Make buttons take full width */
-    max-width: 100%; /* Override the desktop max-width */
-    margin-bottom: 10px; /* Add space between stacked buttons */
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
   }
 
   .button-group .btn:last-child {
-    margin-bottom: 0; /* Remove margin from the last button */
+    margin-bottom: 0;
+  }
+
+  /* Optimize label card for mobile rendering */
+  .label-card {
+    font-size: 0.9rem; /* Slightly smaller font for mobile */
+  }
+
+  .label-card img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Print-specific styles for mobile */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-container {
+    display: grid;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .label-card {
+    width: 2in;
+    height: 2in;
+    border: 1px dashed #666;
+    box-sizing: border-box;
+    overflow: hidden;
+    page-break-inside: avoid;
+  }
+
+  .label-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Hide non-printable elements */
+  .container, .top-nav-container, footer {
+    display: none;
+  }
+}
+
+/* Add to assets/css/styles.css */
+@media (max-width: 767.98px) {
+  .pdf-export-btn {
+    display: none;
   }
 }

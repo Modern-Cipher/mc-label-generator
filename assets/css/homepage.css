@@ -1,0 +1,214 @@
+/* assets/css/homepage.css */
+
+/* --- GENERAL & FONT STYLES --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content-wrapper {
+  padding-top: 100px;
+  padding-bottom: 4rem;
+  flex-grow: 1;
+}
+
+/* --- GLASSMORPHISM NAVBAR --- */
+.navbar {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+  height: 40px;
+}
+
+/* Navbar Link Underline Effect */
+.navbar-nav .nav-link {
+  position: relative;
+  padding-bottom: 0.5rem;
+  transition: color 0.3s ease-in-out;
+  color: #343a40;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0d6efd;
+}
+
+/* --- BRAND CARD STYLES --- */
+.brand-card {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+.brand-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.brand-card .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+/* Placeholder para sa Walang Image */
+.no-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  color: #adb5bd;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Card body flex settings para sa alignment ng button */
+.brand-card .card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.brand-card .card-body .btn {
+  margin-top: auto; /* Itutulak ang button sa pinakababa */
+}
+
+/* --- CUSTOM BUTTON STYLES --- */
+.btn-outline-custom {
+  font-weight: 600;
+  border-width: 2px;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+/* Button Colors */
+.btn-rakjard { color: #1d9b03; border-color: #1d9b03; }
+.btn-ronshe { color: #800000; border-color: #800000; }
+.btn-dragon-angels { color: #a9862a; border-color: #cdaa36; }
+.btn-chicha-crush { color: #ffc107; border-color: #ffc107; }
+.btn-flavomix { color: #57200b; border-color: #57200b; }
+.btn-locked-brand { color: #6c757d; border-color: #6c757d; }
+
+/* Button Hover Effects */
+.btn-rakjard:hover { color: #fff; background-image: linear-gradient(to right, #1d9b03, #ffc107); border-color: transparent; }
+.btn-ronshe:hover { color: #fff; background-image: linear-gradient(to right, #800000, #cdaa36); border-color: transparent; }
+.btn-dragon-angels:hover { color: #3d2b03; background-image: linear-gradient(45deg, #cdaa36, #fcf6ba, #cdaa36); border-color: #a9862a; }
+.btn-chicha-crush:hover { color: #fff; background-image: linear-gradient(to right, #fd7e14, #ffc107); border-color: transparent; }
+.btn-flavomix:hover { color: #fff; background-image: linear-gradient(to right, #57200b,rgb(133, 71, 47)); border-color: transparent; }
+
+/* Special Hover Effect para sa "Locked" Buttons */
+.btn.locked:hover {
+  color: #fff !important;
+  background-image: linear-gradient(to right, #0d6efd, #0dcaf0);
+  border-color: transparent;
+}
+
+
+/* --- FOOTER STYLES --- */
+footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #6c757d;
+  background-color: transparent;
+}
+
+footer img {
+  height: 35px;
+  margin-bottom: 1rem;
+  animation: float-animation 3s ease-in-out infinite;
+}
+
+footer p {
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+@keyframes float-animation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- UPDATED: FOOTER SOCIAL ICONS --- */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #6c757d;
+  background-color: transparent;
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+  transform: translateY(-5px);
+}
+
+/* --- CUSTOM TOOLTIP STYLE --- */
+.tooltip .tooltip-inner {
+  background-color: #343a40;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 0.3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip .tooltip-arrow::before {
+  border-top-color: #343a40;
+}

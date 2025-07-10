@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage - Label Generator</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/mdc.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../css/homepage.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="../../assets/images/mc.png"
+              alt="Modern Cipher Logo"
+              class="header-logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">Generator</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#aboutModalHomepage"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main class="content-wrapper">
+        <div class="container">
+            <h5 class="text-center mb-4">Welcome to</h5>
+          <h1 class="text-center mb-4">Central Hubs</h1>
+          <p class="text-center text-muted mb-5">
+            Select a brand to view its assets.
+          </p>
+
+          <div class="row g-4" id="brand-container">
+            </div>
+        </div>
+      </main>
+
+      <footer>
+        <img src="../../assets/images/mc.png" alt="Modern Cipher Logo" />
+        <div class="social-icons">
+          <a href="#" id="facebook-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" id="tiktok-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" id="messenger-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+          <a href="#" id="telegram-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="#" id="viber-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Viber"><i class="fab fa-viber"></i></a>
+          <a href="#" id="gmail-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Gmail"><i class="fas fa-envelope"></i></a>
+          <a href="#" id="website-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Website"><i class="fas fa-globe"></i></a>
+        </div>
+        <p>Developed by Modern Cipher &copy; 2025</p>
+      </footer>
+    </div>
+
+    <div
+      class="modal fade"
+      id="aboutModalHomepage"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">About This Platform</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>This is the central hub for managing brand assets and tools.</p>
+            <p>Developed by <strong>Modern Cipher</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="../js/brands.js"></script> <script src="../js/homepage.js"></script>
+    <script src="../js/social-links.js"></script>
+  </body>
+</html>
