@@ -42,8 +42,8 @@
 
 /* LOGO IMAGE STYLES - **SPECIFICALLY FOR RONSHE-DRAGONS.PNG** */
 .label-card img.logo {
-  width: 73%; /* BINAGO: Binawasan pa nang kaunti para magkasya lahat */
-  max-width: 73%; /* BINAGO: Binawasan pa nang kaunti para magkasya lahat */
+  width: 100%; /* BINAGO: Binawasan pa nang kaunti para magkasya lahat */
+  max-width: 100%; /* BINAGO: Binawasan pa nang kaunti para magkasya lahat */
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto 0.03in auto; 
   padding: 0;
@@ -54,8 +54,8 @@
 .logo-fallback {
   border: 1px solid #ccc;
   border-radius: 0;
-  width: 73%; /* BINAGO: Itinugma sa bagong laki ng logo */
-  max-width: 73%; /* BINAGO: Itinugma sa bagong laki ng logo */
+  width: 100%; /* BINAGO: Itinugma sa bagong laki ng logo */
+  max-width: 100%; /* BINAGO: Itinugma sa bagong laki ng logo */
   height: 0.25in; 
   display: flex;
   align-items: center;
@@ -101,13 +101,13 @@
 
 /* Individual date lines within dates container - **SPECIFICALLY FOR RONSHE-DRAGONS.PNG** */
 .dates p {
-  font-size: 9pt;
+  font-size: 12pt;
   font-weight: normal;
   text-align: center;
   border-bottom: 0.5pt solid #555;
   padding: 0;
   margin: 0;
-  line-height: 1.1;
+  line-height: 0.85;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
