@@ -1,0 +1,208 @@
+{
+  "name": "mc-label-generator",
+  "path": "c:\\Serverless\\mc-label-generator",
+  "type": "directory",
+  "children": [
+    {
+      "name": "assets",
+      "type": "folder",
+      "children": [
+        {
+          "name": "css",
+          "type": "folder",
+          "children": [
+            {
+              "name": "chicha-crush-mobile.css.txt",
+              "type": "file"
+            },
+            {
+              "name": "chicha-crush.css",
+              "type": "file"
+            },
+            {
+              "name": "dragon-angels.css",
+              "type": "file"
+            },
+            {
+              "name": "homepage.css",
+              "type": "file"
+            },
+            {
+              "name": "jad.css",
+              "type": "file"
+            },
+            {
+              "name": "rakjard.css",
+              "type": "file"
+            },
+            {
+              "name": "ronshe-dragons.css",
+              "type": "file"
+            },
+            {
+              "name": "styles copy.css.txt",
+              "type": "file"
+            },
+            {
+              "name": "styles.css",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "images",
+          "type": "folder",
+          "children": [
+            {
+              "name": "chicha-crush.png",
+              "type": "file"
+            },
+            {
+              "name": "dragon-angels-1.png",
+              "type": "file"
+            },
+            {
+              "name": "dragon-angels.png",
+              "type": "file"
+            },
+            {
+              "name": "flavoMix.png",
+              "type": "file"
+            },
+            {
+              "name": "folder.png",
+              "type": "file"
+            },
+            {
+              "name": "jad.png",
+              "type": "file"
+            },
+            {
+              "name": "jad1.png",
+              "type": "file"
+            },
+            {
+              "name": "mc.png",
+              "type": "file"
+            },
+            {
+              "name": "mdc.ico",
+              "type": "file"
+            },
+            {
+              "name": "rakjard.png",
+              "type": "file"
+            },
+            {
+              "name": "ronshe-dragons-1.png",
+              "type": "file"
+            },
+            {
+              "name": "ronshe-dragons.png",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "js",
+          "type": "folder",
+          "children": [
+            {
+              "name": "brands.js",
+              "type": "file"
+            },
+            {
+              "name": "header.js",
+              "type": "file"
+            },
+            {
+              "name": "homepage.js",
+              "type": "file"
+            },
+            {
+              "name": "mobile-handler.js",
+              "type": "file"
+            },
+            {
+              "name": "script copy.js.txt",
+              "type": "file"
+            },
+            {
+              "name": "script copyver2.js.txt",
+              "type": "file"
+            },
+            {
+              "name": "script.js",
+              "type": "file"
+            },
+            {
+              "name": "service-worker.js.txt",
+              "type": "file"
+            },
+            {
+              "name": "social-links.js",
+              "type": "file"
+            },
+            {
+              "name": "version.js",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "views",
+          "type": "folder",
+          "children": [
+            {
+              "name": "homepage.html",
+              "type": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": ".gitignore",
+      "type": "file"
+    },
+    {
+      "name": "Dockerfile",
+      "type": "file"
+    },
+    {
+      "name": "docker-compose.yml",
+      "type": "file"
+    },
+    {
+      "name": "filetree.json",
+      "type": "file"
+    },
+    {
+      "name": "index copy.html.txt",
+      "type": "file"
+    },
+    {
+      "name": "index copyver2.html.txt",
+      "type": "file"
+    },
+    {
+      "name": "index.html",
+      "type": "file"
+    },
+    {
+      "name": "manifest.json.txt",
+      "type": "file"
+    },
+    {
+      "name": "nginx.conf",
+      "type": "file"
+    }
+  ],
+  "metadata": {
+    "generated": "2025-12-09T00:38:59.212Z",
+    "generator": "FileTree Pro Extension",
+    "version": "0.2.0",
+    "showIcons": false,
+    "maxDepth": 10
+  }
+}

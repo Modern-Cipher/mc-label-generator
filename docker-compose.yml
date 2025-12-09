@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8081:80"  # Ginawa kong 8081 para iwas conflict sa kabila
+    volumes:
+      - ./:/usr/share/nginx/html

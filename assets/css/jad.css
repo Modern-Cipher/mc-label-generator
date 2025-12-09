@@ -1,0 +1,121 @@
+/* assets/css/jad.css */
+
+/* Universal reset for label-card content */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles for the label card */
+.label-card {
+  font-family: 'Poppins', sans-serif;
+  border: 0.75pt dashed lightgray; /* Border for separation */
+  text-align: center;
+  overflow: hidden; /* Clip overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push everything to the top */
+  align-items: stretch; /* Stretch content to full width */
+  width: 2in;
+  height: 2in;
+  min-width: 2in;
+  min-height: 2in;
+  max-width: 2in;
+  max-height: 2in;
+  box-sizing: border-box;
+  padding: 0.02in 0; 
+  margin: 0;
+  page-break-inside: avoid;
+  background-color: #ffffff;
+}
+
+/* Wrapper for logo to control its spacing and centering */
+.logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 0.05in;
+}
+
+/* LOGO IMAGE STYLES - **SPECIFICALLY FOR JAD.PNG** */
+.label-card img.logo {
+  width: 100%;
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* Fallback for when logo image fails to load */
+.logo-fallback {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 0.35in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.14in;
+  font-weight: bold;
+  color: #888;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+/* Main Product Text */
+.label-card .main-content {
+  margin: 0 0 3pt 0;
+  padding: 0 0.02in;
+  font-size: 9pt;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* Dates container (PD and BB) */
+.dates {
+  width: 100%;
+  margin-top: 0;
+  padding: 0 0.02in;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+/* Individual date lines */
+.dates p {
+  font-size: 12pt;
+  font-weight: normal;
+  text-align: center;
+  border-bottom: 0.5pt solid #555;
+  padding: 0;
+  margin: 0;
+  line-height: 1.0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* Special rule for the BB date line */
+.dates p:last-child {
+  border-bottom: 0.5pt solid #555;
+  text-decoration: none;
+}
