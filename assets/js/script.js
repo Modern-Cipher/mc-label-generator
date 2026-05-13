@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentLabelCssLink) {
             currentLabelCssLink.remove();
         }
-        const cssFileName = logoPath.split('/').pop().replace('.png', '.css');
+        // DITO INAPPLY ANG FIX PARA SA .WEBP AT IBA PANG FORMAT
+        const cssFileName = logoPath.split('/').pop().replace(/\.(png|jpe?g|webp)$/i, '.css');
         const cssFilePath = `./assets/css/${cssFileName}`; // Relative path
 
         const link = document.createElement('link');
@@ -127,7 +128,8 @@ function generateLabelData() {
     };
     
     Object.assign(data, calculateMaxLabels(data.paperSize, data.orientation));
-    data.cssPath = `./assets/css/${data.logoSrc.split('/').pop().replace('.png', '.css')}`; // Relative path
+    // DITO INAPPLY ANG FIX PARA HINDI MAG-ERROR ANG DATA OBJECT
+    data.cssPath = `./assets/css/${data.logoSrc.split('/').pop().replace(/\.(png|jpe?g|webp)$/i, '.css')}`; // Relative path
     return data;
 }
 
